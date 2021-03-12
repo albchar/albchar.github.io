@@ -46,13 +46,13 @@
 							<p>Możliwe jest "jednoczesne" przypisanie wartości kilku różnym zmiennym w tej samej linijce jak w przykładzie poniżej.</p>
 							<pre><code>a, b = 3, 4<br>print a<br>print b</code></pre>
 							<p>Operacje, które mieszają ze sobą liczby i napisy nie są obsługiwane:</p>
-							<pre><code># To nie bedzie dzialac!</br>print jeden + dwa + witaj</code></pre>
+							<pre><code># To nie bedzie dzialac!<br>print jeden + dwa + witaj</code></pre>
 					<h1>Tablice</h1>
 						<p>Tablice w Pythonie również nazywane są listami.</p>
 						<p>Tablicę liczb można sobie wyobrazić jako zmienne ustawione w szereg. Każdej zmiennej jest przyporządkowany indeks, czyli oznaczenie jej miejsca w szeregu. Tablice mogą zawierać dane dowolnego typu. Poza tym nie ma ograniczeń (oprócz tych sprzętowych) dla rozmiaru tablic. Dostęp do danych w tablicy uzyskujemy poprzez indeks każdego elementu. Poniżej pokazano jak zbudować tablicę.</p>
-						<pre><code>tablica = []</br>tablica.append(1)</br>tablica.append(2)</br>tablica.append(3)</br>print tablica[0] # wypisze 1</br>print tablica[1] # wypisze 2</br>print tablica[2] # wypisze 3</br></br># wypisze kolejno 1, 2, 3</br>for x in tablica:</br>   print x</code></pre>
+						<pre><code>tablica = []<br>tablica.append(1)<br>tablica.append(2)<br>tablica.append(3)<br>print tablica[0] # wypisze 1<br>print tablica[1] # wypisze 2<br>print tablica[2] # wypisze 3<br><br># wypisze kolejno 1, 2, 3<br>for x in tablica:<br> print x</code></pre>
 						<p>Próba wywołania elementu o nieistniejącym adresie wygeneruje wyjątek (czyli błąd).</p>
-						<pre><code>tablica = [1,2,3]</br>print tablica[10]</code></pre>
+						<pre><code>tablica = [1,2,3]<br>print tablica[10]</code></pre>
 					<h1>Podstawowe operatory</h1>
 						<p>Ta sekcja wyjaśnia jak posługiwać się podstawowymi operatorami w Pythonie.</p>
 						<h2>Operatory arytmetyczne</h2>
@@ -62,7 +62,7 @@
 							<p>Innym dostępnym operatorem jest modulo (<code>%</code>), który zwraca resztę z dzielenia (<code>dzielna % dzielnik = reszta</code>).</p>
 							<pre><code>reszta = 11 % 3</code></pre>
 							<p>Używając dwoch znaków mnożenia otrzymujemy symbol potęgowania.</p>
-							<pre><code>kwadrat = 7 ** 2</br>szescian = 2 ** 3</code></pre>
+							<pre><code>kwadrat = 7 ** 2<br>szescian = 2 ** 3</code></pre>
 						<h2>Operacje na napisach</h2>
 							<p>Python umożliwia łączenie napisów za pomocą symbolu dodawania:</p>
 							<pre><code>witajswiecie = "witaj" + " " + "swiecie"</code></pre>
