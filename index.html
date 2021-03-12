@@ -30,21 +30,21 @@
 							<p>Aby stworzyć nową zmienną całkowitą, użyj następującej składni:</p>
 							<pre><code>calkowita = 7 </code></pre>
 							<p>Liczbę rzeczywistą możesz uzyskać na dwa sposoby:</p>
-							<pre><code>rzeczywista = 7.5 <br> rzeczywista = float(38) </br></code></pre>
+							<pre><code>rzeczywista = 7.5 <br> rzeczywista = float(38) </code></pre>
 							<p>Liczby rzeczywiste zazwyczaj zapisuje się w pamięci komputera za pomocą tzw. techniki zmiennego przecinka (z ang. <em>floating point</em>), stąd często stosowana nazwa – liczba zmiennoprzecinkowa. Praktyczną konsekwencją jest to, że liczba jest zapisywana z określoną dokładnością.</p>
 							<p>W poniższym fragmencie kodu użyto zapisu pozwalającego ustawić precyzję, z jaką wyświetlaną jest liczba i omówimy go później. Tymczasem wprowadź kod do interpretera i zaobserwuj różnice.</p>
-							<pre><code>x = 4.3 <br> print x </br><br> print '%.20f' % x </br><br> print x # print nie zmienil zawartosci zmiennej x</br></code></pre>
+							<pre><code>x = 4.3 <br> print x <br> print '%.20f' % x <br> print x # print nie zmienil zawartosci zmiennej x</code></pre>
 							<p>Istnieje również technika tzw. stałego przecinka, ale jest używana rzadziej i w komputerach o małej mocy obliczeniowej.</p>
 						<h2>Napisy</h2>
 							<p>Napis (<code>string</code>) jest inicjowany za pomocą pojedyńczego lub podwójnego cudzysłowu.</p>
-							<pre><code>napis1 = 'witaj' <br>napis2 = "witaj"</br><br>napis 1 == napis2 # zwroci "True"</br></code></pre>
+							<pre><code>napis1 = 'witaj' <br>napis2 = "witaj"<br>napis 1 == napis2 # zwroci "True"</code></pre>
 							<p>Różnica między nimi polega na tym, że dzięki użyciu podwójnego cudzysłowu można bez przeszkód używać apostrofów (podczas gdy oznaczałyby koniec napisu przy użyciu pojedynczego cudzysłowu).</p>
 							<pre><code>napis = "Nie martw sie o 'pojedyncze' cudzyslowy."</code></pre>
 							<p>Napisy można definiować na jeszcze kilka innych sposobów, które ułatwiają dołączanie takich znaków jak powrót karetki, odwrotne ukośniki i znaki Unicode.</p>
 							<p>Na liczbach i stringach można wykonywać proste operacje:</p>
-							<pre><code>jeden = 1<br>dwa = 2</br><br>trzy = jeden + dwa</br><br>print trzy</br><br>witaj = "witaj"</br><br>swiecie = "swiecie"</br><br>witajswiecie = witaj + " " + swiecie</br><br>print witajswiecie</br></code></pre>
+							<pre><code>jeden = 1<br>dwa = 2<br>trzy = jeden + dwa<br>print trzy<br>witaj = "witaj"<br>swiecie = "swiecie"<br>witajswiecie = witaj + " " + swiecie<br>print witajswiecie</code></pre>
 							<p>Możliwe jest "jednoczesne" przypisanie wartości kilku różnym zmiennym w tej samej linijce jak w przykładzie poniżej.</p>
-							<pre><code>a, b = 3, 4</br>print a</br>print b</code></pre>
+							<pre><code>a, b = 3, 4<br>print a<br>print b</code></pre>
 							<p>Operacje, które mieszają ze sobą liczby i napisy nie są obsługiwane:</p>
 							<pre><code># To nie bedzie dzialac!</br>print jeden + dwa + witaj</code></pre>
 					<h1>Tablice</h1>
@@ -82,11 +82,6 @@
     <div class="progress-bar" id="myBar"></div>
   </div>
 </div>
-
-<div>
-    <center><h2>Kolejny kurs już za:</h2>
-    <p id="zegar" style="font-size:30px"></p>
-</div>
 <script>
 //pasek
 
@@ -98,37 +93,6 @@ function myFunction() {
   var scrolled = (winScroll / height) * 100;
   document.getElementById("myBar").style.width = scrolled + "%";
 }
-</script>
-
-<script>
-//timer
-var countDownDate = new Date("Jun 29, 2020 14:00:00").getTime();
-
-
-var x = setInterval(function() {
-
- 
-  var now = new Date().getTime();
-    
-  
-  var distance = countDownDate - now;
-    
-  
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    
-  
-  document.getElementById("zegar").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
-    
- 
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("zegar").innerHTML = "EXPIRED";
-  }
-}, 1000);
 </script>
 </body>
 </html>
