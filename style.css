@@ -115,8 +115,8 @@ border-left: 2px solid #69c;
     margin: 0;
   }
 }
-/* @media only screen and (max-device-width: 1600px) {
+@media only screen and (max-device-width: 1600px) {
 	h1{
 		position: static;
-	} */
-			
+  } 
+}
