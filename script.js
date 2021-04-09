@@ -13,7 +13,7 @@ var compMsg = document.querySelector('.compMsg');
 var availableBox = [1,1,1,1,1,1,1,1,1];
 var availableIndexPosition = [0,1,2,3,4,5,6,7,8];
 var timerId = null;
-var scoreX = 0, scoreO = 0, palyerMoveCounter = 0, computerMoveCounter = 0;
+var scoreX = 0, scoreO = 0, playerMoveCounter = 0, computerMoveCounter = 0;
 var winCombos = [[0,1,2], [3,4,5], [6,7,8], [0,3,6], [1,4,7], [2,5,8], [0,4,8], [2,4,6]];
 var oFilled = [];
 var xFilled = [];
@@ -34,7 +34,7 @@ var displayWinner = function(num1,num2,num3,str){
     allBoxes[num1].style.backgroundColor = 'green';
     allBoxes[num2].style.backgroundColor = 'green';
     allBoxes[num3].style.backgroundColor = 'green';
-    winMessage.textContent = 'Winner is '+str+'!!!';
+    winMessage.textContent = 'Zwyciężył '+str+'!';
     winMessage.style.display = 'block';
     turnInfoDOM.style.display = 'none';
     compMsg.style.display = 'none';
@@ -65,13 +65,13 @@ var checkWinAndDisplay = function(){
             displayWinner(0,4,8,allBoxes[8].textContent);
     }else if(isSame(2,4,6)){
             displayWinner(2,4,6,allBoxes[6].textContent);
-    }else if(palyerMoveCounter === 9 || computerMoveCounter  === 5){
-        winMessage.textContent = 'Its a Tie mate!!!';
+    }else if(playerMoveCounter === 9 || computerMoveCounter  === 5){
+        winMessage.textContent = 'Remis!';
         winMessage.style.display = 'block';
         turnInfoDOM.style.display = 'none';
         compMsg.style.display = 'none';
         document.querySelector('button').disabled = false;
-        palyerMoveCounter = 0;
+        playerMoveCounter = 0;
     }
 }
 
@@ -89,14 +89,14 @@ var loadTwoPlayer = function(){
                     event.target.style.backgroundColor = 'mistyrose';
                     playerMarker = 'O';
                     document.querySelector('body h3 span').textContent = 'O';
-                    palyerMoveCounter++;
+                    playerMoveCounter++;
                 }
                 else{
                     event.target.textContent = playerMarker;
                     event.target.style.backgroundColor = 'lightblue';
                     playerMarker = 'X';
                     document.querySelector('body h3 span').textContent = 'X';
-                    palyerMoveCounter++;
+                    playerMoveCounter++;
                 }
                 checkWinAndDisplay();            
             }
@@ -268,7 +268,7 @@ resetBtn.addEventListener('click',function(){
     })
     turnInfoDOM.style.display = 'block';
     winMessage.style.display = 'none';
-    palyerMoveCounter = 0;
+    playerMoveCounter = 0;
     playerMarker = 'X';
     document.querySelector('body h3 span').textContent = 'X';
     availableBox = [1,1,1,1,1,1,1,1,1];
