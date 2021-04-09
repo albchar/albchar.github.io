@@ -264,7 +264,7 @@ twoPlayer.addEventListener('click',function(event){
 resetBtn.addEventListener('click',function(){ 
     allBoxes.forEach(function(item){
         item.textContent = '';
-        //item.style.backgroundColor = '#bbd0e5';
+        item.style.backgroundColor = '#ffffff';
     })
     turnInfoDOM.style.display = 'block';
     winMessage.style.display = 'none';
