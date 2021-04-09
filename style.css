@@ -85,11 +85,6 @@ border-left: 2px solid #69c;
   background-color: #f1f1f1;
 }
 
-body {
-	margin: 0 auto;
-	font-family: Arial;
-}
-
 .box{
     width:100px;
     height:100px;
@@ -101,7 +96,13 @@ body {
     display:flex;
     justify-content: center;   
 }
+h5{
+    text-align: center;
+}
 
+h3{
+    text-align: center;
+}
 p{
     text-align: justify;
 }
@@ -113,6 +114,21 @@ p{
 }
 .game{
     display: none;
+}
+h4 {
+    display: block;
+    text-align: center;    
+    color:#444;
+    border:1px solid #CCC;
+    background:#DDD;
+    box-shadow: 0 0 5px -1px rgba(0,0,0,0.2);
+    cursor:pointer;
+    /* max-width: 300px; */
+    padding: 5px;
+}
+h4:active {
+    color:red;
+    box-shadow: 0 0 5px -1px rgba(0,0,0,0.6);
 }
 .flex-wrap{
     display:flex;
