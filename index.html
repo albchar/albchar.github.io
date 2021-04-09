@@ -78,28 +78,46 @@
 							<br>                                    
 						<p>To wszystko w tym krótkim kursie.</p>
                     </section>
-			</div>
-			<div class="game-area">
-	
-				<div class="game-options">
-					<select name="game_type" id="game_type" onchange="resetAIButton()">
-						<option value="3">3 x 3 Board</option>
-						<option value="4">4 x 4 Board</option>
-						<option value="5">5 x 5 Board</option>
-					</select>
-					
-					<input type="checkbox" name="robot" checked="true" id="robot"> With Computer? <br/>
-					<input type="submit" value="Start Game" onclick="generateGame()" class="submit-button"> 
-				</div>
-		
-				<div id="game-board" class="game-board">
-					Please select your game from above, then press 'Start Game'.
-				</div>
-				<div class="score-card">
-					Player X Score: <span id="score-X">0</span> <br>
-					Player Y Score: <span id="score-Y">0</span>
-				</div>
-			</div>		
+<h1>TIC - TAC - TOE</h1>
+    <div class="startScreen">
+        <p>You probably already know how to play Tic-Tac-Toe. It's a really simple game, right? That's what most people think. But if you really wrap your brain around it, you'll discover that Tic-Tac-Toe isn't quite as simple as you think!</p>
+        <h3>Ready to play??</h3>
+        <h2 class="option youvsme">You Vs Computer (Hard)</h2>
+        <h2 class="option youvsnoob">You vs Computer (Easy)</h2>
+        <h2 class="option twoPlayers">Two Player Mode (It Depends!)</h2>
+    </div>
+    <div class="game">
+        <div class="flex-wrap">
+            <div>Score</div>
+            <div class="xScore"> Player X - <span>0</span>
+            </div>
+            <div class="oScore"> Player O - <span>0</span>
+            </div>
+        </div>
+
+        <div class="rows">
+            <div class="box" data-index = "0" ></div>
+            <div class="box" data-index = "1" ></div>
+            <div class="box" data-index = "2" ></div>
+        </div>
+        <div class="rows">
+            <div class="box" data-index = "3" ></div>
+            <div class="box" data-index = "4" ></div>
+            <div class="box" data-index = "5" ></div>
+        </div>
+        <div class="rows">
+            <div class="box" data-index = "6" ></div>
+            <div class="box" data-index = "7" ></div>
+            <div class="box" data-index = "8" ></div> 
+        </div>
+        <h3 class = "playerTurn">Player <span>X</span>'s Turn</h3>
+        <h3 class="compMsg">Computer is Thinking...</h3>
+        <h3 class = "winMessage"></h3>
+        <div class="flex-wrap">
+            <button class="resetBtn footerBtn">Restart the Game</button>
+            <button class="goHomeBtn footerBtn">Return to Home</button>
+        </div>
+    </div>
 	</body>
 </html>
 					
