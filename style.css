@@ -61,20 +61,20 @@ header img {
 
 .topnav {
   overflow: hidden;
-  background-color: rgb(255,255,255,0.05);
+  background-color: rgba(46, 44, 44, 0.05);
 }
 
-  /* Style the topnav links */
+  
   .topnav a {
       float: left;
       display: block;
-      color: #ffb200;
+      color: #333;
       text-align: center;
       padding: 14px 16px;
       text-decoration: none;
   }
 
-      /* Change color on hover */
+      
       .topnav a:hover {
           background-color: #ddd;
           color: black;
